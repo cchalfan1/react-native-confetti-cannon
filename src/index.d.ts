@@ -16,6 +16,7 @@ export interface ExplosionProps {
   onAnimationResume?: () => void;
   onAnimationStop?: () => void;
   onAnimationEnd?: () => void;
+  zIndex?: number;
   testID?: string;
 }
 

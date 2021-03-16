@@ -32,13 +32,13 @@ class Confetti extends React.PureComponent<Props> {
     const { containerTransform, transform, opacity, color, zIndex } = this.props;
     const { width, height, isRounded } = this;
     const containerStyle = { transform: containerTransform };
-    const style = { width, height, backgroundColor: color, transform, opacity, zIndex };
+    const style = { width, height, backgroundColor: color, transform, opacity };
 
     return (
       <Animated.View
         pointerEvents="none"
         renderToHardwareTextureAndroid={true}
-        style={[styles.confetti, containerStyle]}>
+        style={[styles.confetti, containerStyle, {zIndex}]}>
         <Animated.View style={[isRounded && styles.rounded, style]} />
       </Animated.View>
     );
