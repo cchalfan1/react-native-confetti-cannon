@@ -24,6 +24,7 @@ type Props = {|
   onAnimationResume?: () => void,
   onAnimationStop?: () => void,
   onAnimationEnd?: () => void,
+  zIndex?:number,
   testID?: string
 |};
 
@@ -178,7 +179,7 @@ class Explosion extends React.PureComponent<Props, State> {
   };
 
   render() {
-    const { origin, fadeOut } = this.props;
+    const { origin, fadeOut, zIndex } = this.props;
     const { items } = this.state;
     const { height, width } = Dimensions.get('window');
 
@@ -227,6 +228,7 @@ class Explosion extends React.PureComponent<Props, State> {
               transform={transform}
               opacity={opacity}
               key={index}
+              zIndex={zIndex}
               testID={`confetti-${index + 1}`}
             />
           );

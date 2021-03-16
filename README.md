@@ -42,6 +42,7 @@ const MyComponent = () => (
 | colors           | string[]               | give your own colors to the confettis      |          | default colors |
 | autoStart        | boolean                | auto start the animation                   |          | true           |
 | autoStartDelay   | number                 | delay to wait before triggering animation  |          | 0              |
+| zIndex           | number                 | confetti zIndex                            |          | 0              |
 
 ## Events
 
